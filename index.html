@@ -9,8 +9,14 @@
     <title>Vue Todolist</title>
 </head>
 <body>
-    
+    <h1>Vue Todolist</h1>
+
+    <div id="app">
+        <ul v-for="action, index in todolist">
+            <li :class="checkIfDone(index)" @click="changeStatus(index)">{{action.titolo}}</li>
+        </ul>
+    </div>
 
     <script src="./js/main.js"></script>
 </body>
-</html>
+</html>                               
